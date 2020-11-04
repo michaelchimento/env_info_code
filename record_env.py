@@ -50,4 +50,4 @@ while __name__=="__main__":
     print(write_line)
     with open(file_name, "a") as savefile: # open data file in write mode
         savefile.write(write_line)
-    time.sleep(1)
+    time.sleep(600)
