@@ -26,11 +26,11 @@ location="Gblock1"
 
 time_stamp = datetime.datetime.now()
 print("program is starting at {}".format(time_stamp))
-file_name = "/home/pi/env_info_code/data/lux_info_{}.csv".format(time_stamp.date())
+file_name = "/home/pi/env_info_code/data/environmental_info_{}.csv".format(time_stamp.date())
 
 if not os.path.isfile(file_name):
    with open(file_name, "a") as savefile:
-       header = "timestamp,location,lux\n"
+       header = "timestamp,location,lux,temperature,humidity\n"
        savefile.write("#{} start time: {} \n".format(location,time_stamp))
        savefile.write(header)
 else:
